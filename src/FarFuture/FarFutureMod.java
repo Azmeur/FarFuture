@@ -1,32 +1,26 @@
 package FarFuture;
 
-import FarFuture.content.*;
-import arc.*;
-import arc.util.*;
-import mindustry.*;
-import mindustry.content.*;
-import mindustry.game.EventType.*;
-import mindustry.gen.*;
-import mindustry.mod.*;
-import mindustry.ui.dialogs.*;
+import FarFuture.content.FFBlocks;
+import arc.Core;
+import arc.Events;
+import arc.util.Log;
+import arc.util.Time;
+import mindustry.game.EventType.ClientLoadEvent;
+import mindustry.mod.Mod;
+import mindustry.ui.dialogs.BaseDialog;
 
 public class FarFutureMod extends Mod{
-    public static String ModName = "far-future";
-    public static String name(String add){
-        return ModName + "-" + add;
-    }
-
     public FarFutureMod(){
         Log.info("Loaded FarFutureMod constructor.");
 
-        //listen for game load event
+        //listen for game load evente
         Events.on(ClientLoadEvent.class, e -> {
             //show dialog upon startup
             Time.runTask(10f, () -> {
                 BaseDialog dialog = new BaseDialog("frog");
                 dialog.cont.add("behold").row();
                 //mod sprites are prefixed with the mod name (this mod is called 'example-java-mod' in its config)
-                dialog.cont.image(Core.atlas.find("farfuturemod-frog")).pad(20f).row();
+                dialog.cont.image(Core.atlas.find("FarFutureMod-frog")).pad(20f).row();
                 dialog.cont.button("I see", dialog::hide).size(100f, 50f);
                 dialog.show();
             });

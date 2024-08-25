@@ -39,7 +39,7 @@ import static mindustry.type.ItemStack.*;
 
 public class FFBlocks {
     public static Block 
-        //production
+        //productione
         siliconMeltdown;
     public static void load(){
         siliconMeltdown = new GenericCrafter("silicon-meltdown"){{

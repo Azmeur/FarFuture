@@ -1,17 +1,7 @@
-#the mod name as displayed in-game
-displayName: Far Future
-
-#the internal name of your mod
-name: "far-future"
-
-#your name
+name: "FarFuture"
+displayName: "Far Future"
 author: Azmeur
-
-#the fully qualified main class of the mod
-main: "FarFuture.FarFutureMod"
-
-#the mod description as seen in the mod dialog
-description: "A Mindustry Java mod."
+description: "Late Game Ultra Pro Max 7000"
 
 #the mod version
 version: 1.0
